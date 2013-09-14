@@ -14,7 +14,7 @@ public class RestEndpoint extends HttpServlet {
 	private Logger logger = Logger.getLogger(RestEndpoint.class
 			.getName());
 
-	private GenericDataService<String, StringData<String>> service = new GenericMemcacheServiceImpl<>("stringData");
+	private GenericDataService<String, StringData<String>> service = new GenericDatastoreServiceImpl("stringData");
 	private ObjectMapper mapper = new ObjectMapper();
 
 	@Override
